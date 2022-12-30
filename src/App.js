@@ -1,26 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigaton.components';
 
 function App() {
   return (
-    <>
-      {/* <header>
-        <p>header</p>
-      </header> */}
-
-      <main className="App">
-        <div className="description">
-          <div className="description__photo">
-            {/* <img /> */}
-          </div>
-          <div className="description__text">
-            <p>my description</p>
-          </div>
-        </div>
-      </main>
-
-      {/* <footer>
-        <p>footer</p>
-      </footer> */}
-    </>
+    <Routes>
+      <Route path='/' element={<Navigation />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 
