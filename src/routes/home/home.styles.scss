@@ -1,14 +1,53 @@
+@import "./src/sass/__variables.scss";
+
 .App {
     display: flex;
     justify-content: center;
+    height: calc(100vh - $nav-height);
+    background-image: url("../../assets/90s-3.png");
+    background-position: top;
+    // background-color: $secondary-color;
 }
 
 .description {
     display: flex;
     justify-content: space-around;
+    color: white;
 
     &__photo {
         width: 25rem;
-        height: auto;
+        height: 25rem;
+
+        border-radius: 25px;
+    }
+
+    &__photo-box {
+        margin-left: 15rem;
+        position: relative;
+        z-index: 10;
+
+        // &:before {
+        //     content: '';
+        //     background-color: white;
+        //     width: 25rem;
+        //     height: 25rem;
+        //     position: absolute;
+        //     border-radius: 25px;
+        //     right: -1rem;
+        //     top: -1rem;
+        //     z-index: -2;
+        // }
+
+        &:after {
+            content: '';
+            background-color: white;
+            width: 28rem;
+            height: 28rem;
+            position: absolute;
+            border-radius: 25px;
+            top: -1rem;
+            left: 1rem;
+            z-index: -2;
+        }
     }
 }

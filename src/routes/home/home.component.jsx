@@ -1,14 +1,10 @@
-import descriptionPhoto from '../../assets/description-photo.png';
+import descriptionPhoto from '../../assets/description-photo1.1.png';
 
 import './home.styles.scss';
 
 function Home() {
   return (
     <>
-      {/* <header>
-        <p>header</p>
-      </header> */}
-
       <main className="App">
         <section className="description">
           <div className="description__text">
