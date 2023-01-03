@@ -7,48 +7,5 @@
     background-image: url("../../assets/90s-3-2.png");
     background-position: top;
     // background-color: $secondary-color;
-}
-
-.description {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    margin-top: 15rem;
-
-    &__photo {
-        width: 30rem;
-        height: 30rem;
-
-        border-radius: 25px;
-    }
-
-    &__photo-box {
-        margin-left: 15rem;
-        position: relative;
-        z-index: 10;
-
-        // &:before {
-        //     content: '';
-        //     background-color: white;
-        //     width: 25rem;
-        //     height: 25rem;
-        //     position: absolute;
-        //     border-radius: 25px;
-        //     right: -1rem;
-        //     top: -1rem;
-        //     z-index: -2;
-        // }
-
-        &:after {
-            content: '';
-            background-color: white;
-            width: 30rem;
-            height: 30rem;
-            position: absolute;
-            border-radius: 25px;
-            top: -1rem;
-            left: 1rem;
-            z-index: -2;
-        }
-    }
+    z-index: -999;
 }

@@ -1,19 +1,14 @@
-import descriptionPhoto from '../../assets/description-photo1.1.png';
+import Description from '../../components/description/description.component';
 
 import './home.styles.scss';
+import '../../sass/__utilities.scss';
+
 
 function Home() {
   return (
     <>
       <main className="App">
-        <section className="description">
-          <div className="description__text">
-            <p>my description</p>
-          </div>
-          <div className="description__photo-box">
-            <img className="description__photo" src={descriptionPhoto} alt="Description" />
-          </div>
-        </section>
+        <Description />
       </main>
 
       {/* <footer>
