@@ -12,6 +12,8 @@ const Description = () => {
             <p className='description__text-paragraph'>in touch with multiple techs - from machine learning to mobile dev.</p>
           </div>
           <div className="description__photo-box">
+            <div class="description__photo-box-bubble">Hi!</div>
+            <div class="description__photo-box-pointer"></div>
             <img className="description__photo" src={descriptionPhoto} alt="Description" />
           </div>
         </section>
