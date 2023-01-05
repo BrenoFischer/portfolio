@@ -7,7 +7,7 @@ $bubble-position-left: -3rem;
 
 //Bubble 1 animations
 $appear-bubble-duration: 8s;
-$appear-bubble-delay: 2s;
+$appear-bubble-delay: 2.5s;
 
 //Bubble 2 variables
 $bubble-2-height: 8rem;
@@ -37,7 +37,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         padding: 2rem;
         border-radius: 25px;
         position: relative;
-        // animation: 
+        animation: moveObjectFromLeft .7s;
 
 
         &-title {
@@ -61,6 +61,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         height: 30rem;
 
         border-radius: 25px;
+        animation: moveObjectFromRight .7s;
     }
 
     &__photo-box {
@@ -68,7 +69,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         position: relative;
         z-index: 10;
 
-        &:after {
+        &:before {
             content: '';
             background-color: white;
             width: 30rem;
@@ -77,7 +78,8 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             border-radius: 25px;
             top: -1rem;
             left: 1rem;
-            z-index: -2;
+            z-index: -3;
+            animation: moveObjectFromFarRight .9s;
         }
 
         &-bubble {
@@ -208,18 +210,52 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     }
 }
 
-@keyframes moveTextFromLeft {
+@keyframes moveObjectFromLeft {
     0% {
         opacity: 0;
         transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
         opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes moveObjectFromRight {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveObjectFromFarRight {
+    0% {
+        transform: translateX(15rem);
+    }
+
+    70% {
+        transform: translateX(-2.5rem);
+    }
+
+    80% {
+        transform: translateX(-3rem);
+    }
+
+    100% {
         transform: translateX(0);
     }
 }
