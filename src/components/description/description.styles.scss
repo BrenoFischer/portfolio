@@ -25,6 +25,16 @@ $appear-bubble-4-delay: calc($appear-bubble-duration + $appear-bubble-3-delay + 
 //Bubble 5 animations
 $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + $appear-bubble-delay);
 
+.description-section {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - $nav-height);
+    background-image: url("../../assets/90s-3-2.png");
+    background-position: top;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
 
 .description {
     display: flex;
@@ -35,7 +45,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     &__text {
         background-color: $secondary-color;
         padding: 2rem;
-        border-radius: 25px;
+        border-radius: 10px;
         position: relative;
         animation: moveObjectFromLeft .7s;
 
@@ -60,7 +70,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         width: 30rem;
         height: 30rem;
 
-        border-radius: 25px;
+        border-radius: 10px;
         animation: moveObjectFromRight .7s;
     }
 
@@ -75,7 +85,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             width: 30rem;
             height: 30rem;
             position: absolute;
-            border-radius: 25px;
+            border-radius: 10px;
             top: -1rem;
             left: 1rem;
             z-index: -3;
@@ -197,6 +207,20 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     animation-delay: $appear-bubble-5-delay;
 }
 
+
+.next-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+    &__title {
+        color: white;
+        font-size: 1.5rem;
+    }
+}
 
 
 @keyframes appearBubble {

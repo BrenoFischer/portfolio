@@ -1,0 +1,68 @@
+@import "./src/sass/__variables.scss";
+
+.projects-section {
+    margin: 13rem 10% 13rem 15%;
+
+    &__title-box {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 12rem;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 400;
+
+        &-border {
+            position: absolute;
+            bottom: -0.5rem;
+            width: 50%;
+            height: 1rem;
+            background-color: $primary-color;
+            z-index: -1;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    margin-bottom: 15rem;
+    width: 90rem;
+    height: 30rem;
+
+    &__photo-box {
+        background-color: $secondary-color;
+        width: 40%;
+        flex-shrink: 0;
+        margin-right: 8rem;
+        border-radius: 10px;
+        box-shadow: rgba(18, 30, 39, 0.2) 5px 5px, rgba(18, 30, 39, 0.2) 10px 10px, rgba(18, 30, 39, 0.1) 15px 15px;
+        // box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    &__title {
+        font-family: "Mada", sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+    }
+
+    &__stacks {
+        display: flex;
+    }
+
+    &__stack {
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin: 1rem 1rem 3rem 0;
+        background-color: $secondary-color;
+        color: white;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+

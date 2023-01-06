@@ -1,14 +1,15 @@
 import Description from '../../components/description/description.component';
+import Projects from '../../components/projects/projects.component';
 
-import './home.styles.scss';
 import '../../sass/__utilities.scss';
 
 
 function Home() {
   return (
     <>
-      <main className="App">
+      <main>
         <Description />
+        <Projects />
       </main>
 
       {/* <footer>
