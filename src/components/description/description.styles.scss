@@ -123,6 +123,14 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             animation-delay: $appear-bubble-delay;
         }
     }
+
+    &__icons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
 }
 
 .bubble-2 {
