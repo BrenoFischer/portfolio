@@ -1,5 +1,28 @@
 @import "./src/sass/__variables.scss";
 
 .button {
+    cursor: pointer;
     background-color: $primary-color;
+    width: 15rem;
+    height: 5rem;
+
+    color: white;
+    font-family: $font-family-mada, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+
+    transition: transform .3s, box-shadow .5s;
+
+    &:hover {
+        transform: translateY(-1rem);
+        // box-shadow: 15px black 15px black;
+        box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
+        
+    }
+
+    &:active {
+        transform: translateY(-0.5rem);
+        box-shadow: rgba(18, 30, 39, 0.6) 4px 4px;
+    }
 }

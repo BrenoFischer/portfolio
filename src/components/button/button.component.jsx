@@ -1,8 +1,9 @@
 import './button.styles.scss';
 
-const Button = () => {
+const Button = ({ buttonText }) => {
     return (
         <button className="button">
+            {buttonText}
         </button>
     );
 }
