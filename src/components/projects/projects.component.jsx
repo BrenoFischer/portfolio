@@ -1,3 +1,5 @@
+import Button from '../button/button.component';
+
 import './projects.styles.scss';
 
 const Project = () => {
@@ -13,10 +15,13 @@ const Project = () => {
                     <div className='project__stack'>HTML5</div>
                     <div className='project__stack'>CSS3</div>
                 </div>
-                <div className='project__description'>
+                <div className='project__description-text'>
                     <p>A big drescription about the project I made, stating why this project is amazing
                         and introducing the project theme, the blablablabla blab
                     </p>
+                </div>
+                <div className='project__btn-box'>
+                    <Button buttonText={"View project"} />
                 </div>
             </div>
         </div>

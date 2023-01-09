@@ -41,6 +41,10 @@
         // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 
+    &__description {
+        position: relative;
+    }
+
     &__title {
         font-family: "Mada", sans-serif;
         font-weight: 500;
@@ -60,9 +64,15 @@
         color: white;
     }
 
-    &__description {
+
+    &__description-text {
         font-size: 1.5rem;
         font-weight: 400;
+    }
+
+    &__btn-box {
+        position: absolute;
+        bottom: 0;
     }
 }
 
