@@ -1,0 +1,45 @@
+@import "./src/sass/__variables.scss";
+
+.about-section {
+    position: relative;
+    background-color: $secondary-color;
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.3), 0 -4px 10px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+
+    &__half-left {
+        margin: 12rem 0;
+    }
+
+    &__half-right {
+        margin: 12rem 0;
+    }
+
+    &__title-box {
+        display: inline-block;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 400;
+        color: white;
+
+        &-border {
+            position: absolute;
+            bottom: -0.5rem;
+            width: 50%;
+            height: 1rem;
+            background-color: $primary-color;
+        }
+    }
+
+    &__skills-box {
+        color: white;
+        margin-top: 3rem;
+    }
+
+    &__skill-title {
+        font-size: 1.2rem;
+    }
+}
