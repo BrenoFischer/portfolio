@@ -1,0 +1,35 @@
+@import "./src/sass/__variables.scss";
+
+.next-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s;
+
+    &__title {
+        opacity: 0;
+        color: white;
+        font-size: 1.5rem;
+        transition: all .5s;
+    }
+
+    &:hover &__title {
+        opacity: 1;
+    }
+
+    &:hover &__title-secondary {
+        opacity: 1;
+    }
+
+    &__title-secondary {
+        opacity: 0;
+        font-size: 1.5rem;
+        transition: all .5s;
+        color: $primary-color;
+    }
+}
+

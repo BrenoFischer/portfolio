@@ -1,7 +1,9 @@
 @import "./src/sass/__variables.scss";
 
 .projects-section {
-    margin: 13rem 10% 13rem 15%;
+    margin: 13rem 10% 0 10%;
+    position: relative;
+    padding-bottom: 10rem;
 
     &__title-box {
         display: inline-block;
@@ -27,6 +29,7 @@
 .project {
     display: flex;
     margin-bottom: 15rem;
+    margin-left: 5%;
     width: 95rem;
     height: 35rem;
 

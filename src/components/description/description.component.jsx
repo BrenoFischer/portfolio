@@ -1,11 +1,11 @@
 import descriptionPhoto from '../../assets/description-photo1.1.png';
+import NextSection from '../next-section/next-section.component';
 
 import IconButton from '@mui/material/IconButton';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import './description.styles.scss';
 
@@ -66,12 +66,7 @@ const Description = () => {
               </div>
             </div>
           </div>
-          <div className='next-section'>
-            <p className='next-section__title'>Explore projects</p>
-            <IconButton>
-                <KeyboardArrowDownIcon sx={{color:'white', fontSize: 40}}/>
-            </IconButton>
-          </div>
+          <NextSection title={"Explore Projects"} />
         </section>
       </>
     );

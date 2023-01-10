@@ -6,8 +6,8 @@ $bubble-position-top: -3rem;
 $bubble-position-left: -3rem;
 
 //Bubble 1 animations
-$appear-bubble-duration: 8s;
-$appear-bubble-delay: 2.5s;
+$appear-bubble-duration: 5s;
+$appear-bubble-delay: 1.5s;
 
 //Bubble 2 variables
 $bubble-2-height: 8rem;
@@ -205,21 +205,6 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     left: calc(0.5rem - $bubble-2-position-left);
 
     animation-delay: $appear-bubble-5-delay;
-}
-
-
-.next-section {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-
-    &__title {
-        color: white;
-        font-size: 1.5rem;
-    }
 }
 
 

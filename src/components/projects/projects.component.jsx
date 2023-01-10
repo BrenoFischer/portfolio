@@ -1,8 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+// import { motion, useAnimation } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+// import { useEffect } from "react";
 
 import Button from '../button/button.component';
+import NextSection from '../next-section/next-section.component';
 
 import groundstationImage from '../../assets/projects-images/groundstation.gif'
 import vipImage from '../../assets/projects-images/vip.png';
@@ -13,44 +14,63 @@ import sassImage from '../../assets/projects-images/sass.gif';
 import './projects.styles.scss';
 
 const Project = ({ image, title, descriptionText, stacks, link }) => {
-    const photoVariant = {
-        visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
-        hidden: { opacity: 0, x: -400 },
-    };
+    // const photoVariant = {
+    //     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+    //     hidden: { opacity: 0, x: -400 },
+    // };
 
-    const descriptionVariant = {
-        visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
-        hidden: { opacity: 0, x: 400 },
-    };
+    // const descriptionVariant = {
+    //     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+    //     hidden: { opacity: 0, x: 400 },
+    // };
 
-    const control = useAnimation();
-    const [ref, inView] = useInView();
+    // const control = useAnimation();
+    // const [ref, inView] = useInView();
 
-    useEffect(() => {
-        if (inView) {
-            control.start("visible");
-        }
-        // else {
-        //     control.start("hidden");
-        // }
-    }, [control, inView]);
+    // useEffect(() => {
+    //     if (inView) {
+    //         control.start("visible");
+    //     }
+    //     // else {
+    //     //     control.start("hidden");
+    //     // }
+    // }, [control, inView]);
 
     return (
+        // <div className="project">
+        //     <motion.div
+        //         ref={ref}
+        //         variants={photoVariant}
+        //         initial="hidden"
+        //         animate={control}
+        //         className='project__photo-box' style={{backgroundImage: `url(${image})`}} 
+        //     />
+        //     <motion.div 
+        //         ref={ref}
+        //         variants={descriptionVariant}
+        //         initial="hidden"
+        //         animate={control}
+        //         className='project__description'
+        //     >
+        //         <h2 className='project__title'>{title}</h2>
+        //         <div className='project__stacks'>
+        //             {stacks.map((stack) => {
+        //                 return <div className='project__stack'>{stack}</div>
+        //             })}
+        //         </div>
+        //         <div className='project__description-text'>
+        //             <p>{descriptionText}</p>
+        //         </div>
+        //         <div className='project__btn-box'>
+        //             <Button buttonText={"View project"} />
+        //             <a href={link} target="_blank" rel="noreferrer">View on Github <span>&#x2197;</span></a>
+        //         </div>
+        //     </motion.div>
+        // </div>
+
         <div className="project">
-            <motion.div
-                ref={ref}
-                variants={photoVariant}
-                initial="hidden"
-                animate={control}
-                className='project__photo-box' style={{backgroundImage: `url(${image})`}} 
-            />
-            <motion.div 
-                ref={ref}
-                variants={descriptionVariant}
-                initial="hidden"
-                animate={control}
-                className='project__description'
-            >
+            <div className='project__photo-box' style={{backgroundImage: `url(${image})`}} />
+            <div className='project__description'>
                 <h2 className='project__title'>{title}</h2>
                 <div className='project__stacks'>
                     {stacks.map((stack) => {
@@ -64,7 +84,7 @@ const Project = ({ image, title, descriptionText, stacks, link }) => {
                     <Button buttonText={"View project"} />
                     <a href={link} target="_blank" rel="noreferrer">View on Github <span>&#x2197;</span></a>
                 </div>
-            </motion.div>
+            </div>
         </div>
     )
 }
@@ -125,6 +145,7 @@ const Projects = () => {
                     link={linkSass}
                 />
             </div>
+            <NextSection title={"More about me"} secondary={true} />
         </section>
     );
 }
