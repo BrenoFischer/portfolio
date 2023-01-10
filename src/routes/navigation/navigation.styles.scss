@@ -20,22 +20,23 @@
         text-transform: lowercase;
         font-size: 2rem;
         font-weight: bold;
-        transition: all 0.2s;
+        transition: all .3s ease;
         color: white;
         
     
         &-border {
-            width: 100%;
+            opacity: 0;
+            width: 0;
             position: absolute;
             bottom: -5px;
             background-color: rgb(255, 113, 91);
             height: 0.3rem;
-            transition: all 0.3s;
+            transition: all .3s;
         }
 
         &:hover &-border {
-            height: 0.5rem;
-            bottom: -3px;
+            opacity: 1;
+            width: 100%;
         }
     }
 }
