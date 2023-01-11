@@ -1,28 +1,21 @@
 import descriptionPhoto from '../../assets/description-photo1.1.png';
 import NextSection from '../next-section/next-section.component';
 
-import IconButton from '@mui/material/IconButton';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+import { IconContext } from 'react-icons';
+import { ImGithub } from "react-icons/im";
+import { FaLinkedin } from "react-icons/fa";
+import { TbMail } from "react-icons/tb";
 
 import './description.styles.scss';
 
 const Description = () => {
-  const DefineIconButton = (props) => {
+  const DefineIconButton = ({icon}) => {
     return (
-      <IconButton
-        sx={{
-          color: "rgb(255, 113, 91)",
-          "&:hover": {
-              color: "white"
-            },
-          transition: "all .5s"
-          }}
-        >
-        {props.children}
-      </IconButton>
+      <IconContext.Provider value={{ className: "global-class-name" }}>
+        <div className='description__icon'>
+            {icon}
+        </div>
+      </IconContext.Provider> 
     )
   }
 
@@ -54,15 +47,9 @@ const Description = () => {
               <img className="description__photo" src={descriptionPhoto} alt="Description" />
               
               <div className='description__icons'>
-                <DefineIconButton>
-                  <GitHubIcon sx={{fontSize: 40}} />
-                </DefineIconButton>
-                <DefineIconButton>
-                  <LinkedInIcon sx={{fontSize: 40}} />
-                </DefineIconButton>
-                <DefineIconButton>
-                  <EmailIcon sx={{fontSize: 40}} />
-                </DefineIconButton>
+                <DefineIconButton icon={<ImGithub />} />
+                <DefineIconButton icon={<FaLinkedin />} />
+                <DefineIconButton icon={<TbMail />} />
               </div>
             </div>
           </div>

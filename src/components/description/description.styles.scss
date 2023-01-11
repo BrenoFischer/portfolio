@@ -138,9 +138,19 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         margin-top: 2rem;
         display: flex;
         justify-content: space-around;
-        
+
     }
 
+    &__icon {
+        cursor: pointer;
+        font-size: 4rem;
+        color: $primary-color;
+        transition: all .5s;
+
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .bubble-2 {
