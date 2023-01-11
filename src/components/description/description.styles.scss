@@ -141,14 +141,32 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
 
     }
 
+    &__icon-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $primary-color;
+    }
+
     &__icon {
         cursor: pointer;
         font-size: 4rem;
-        color: $primary-color;
         transition: all .5s;
 
         &:hover {
             color: white;
+        }
+
+        &-label {
+            color: white;
+            opacity: 0;
+            margin-top: .5rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        &:hover + &-label {
+            opacity: 1;
         }
     }
 }

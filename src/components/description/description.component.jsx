@@ -9,11 +9,14 @@ import { TbMail } from "react-icons/tb";
 import './description.styles.scss';
 
 const Description = () => {
-  const DefineIconButton = ({icon}) => {
+  const DefineIconButton = ({icon, label}) => {
     return (
       <IconContext.Provider value={{ className: "global-class-name" }}>
-        <div className='description__icon'>
-            {icon}
+        <div className='description__icon-box'>
+          <div className='description__icon'>
+              {icon}
+          </div>
+          <div className='description__icon-label'>{label}</div>
         </div>
       </IconContext.Provider> 
     )
@@ -47,9 +50,9 @@ const Description = () => {
               <img className="description__photo" src={descriptionPhoto} alt="Description" />
               
               <div className='description__icons'>
-                <DefineIconButton icon={<ImGithub />} />
-                <DefineIconButton icon={<FaLinkedin />} />
-                <DefineIconButton icon={<TbMail />} />
+                <DefineIconButton icon={<ImGithub />} label={"Github"} />
+                <DefineIconButton icon={<FaLinkedin />} label={"LinkedIn"} />
+                <DefineIconButton icon={<TbMail />} label={"Send Email"} />
               </div>
             </div>
           </div>
