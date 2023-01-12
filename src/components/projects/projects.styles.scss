@@ -1,35 +1,19 @@
 @import "./src/sass/__variables.scss";
 
 .projects-section {
-    margin: 13rem 10% 5rem 10%;
+    margin: 13rem $section-margin 5rem $section-margin;
     position: relative;
     padding-bottom: 10rem;
+}
 
-    &__title-box {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 12rem;
-    }
-
-    &__title {
-        font-size: 4rem;
-        font-weight: 400;
-
-        &-border {
-            position: absolute;
-            bottom: -0.5rem;
-            width: 50%;
-            height: 1rem;
-            background-color: $primary-color;
-            z-index: -1;
-        }
-    }
+.projects-box {
+    margin-top: 8rem;
 }
 
 .project {
     display: flex;
     margin-bottom: 15rem;
-    margin-left: 5%;
+    margin-left: $section-content-margin;
     width: 95rem;
     height: 35rem;
 

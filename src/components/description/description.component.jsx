@@ -52,7 +52,7 @@ const Description = () => {
               <div className='description__icons'>
                 <DefineIconButton icon={<ImGithub />} label={"Github"} />
                 <DefineIconButton icon={<FaLinkedin />} label={"LinkedIn"} />
-                <DefineIconButton icon={<TbMail />} label={"Send Email"} />
+                <DefineIconButton icon={<TbMail />} label={"Contact"} />
               </div>
             </div>
           </div>

@@ -12,6 +12,7 @@ import travelogImage from '../../assets/projects-images/travelog.png';
 import sassImage from '../../assets/projects-images/sass.gif';
 
 import './projects.styles.scss';
+import SectionTitle from '../section-title/section-title.component';
 
 const Project = ({ image, title, descriptionText, stacks, link }) => {
     // const photoVariant = {
@@ -104,10 +105,7 @@ const Projects = () => {
 
     return (
         <section className='projects-section'>
-            <div className='projects-section__title-box'>
-                <h2 className='projects-section__title'>Projects</h2>
-                <div className='projects-section__title-border'></div>
-            </div>
+            <SectionTitle title={"Projects"} />
             <div className='projects-box'>
                 <Project 
                     image={groundstationImage}

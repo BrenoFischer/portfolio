@@ -146,6 +146,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         flex-direction: column;
         align-items: center;
         color: $primary-color;
+        position: relative;
     }
 
     &__icon {
@@ -163,6 +164,8 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             margin-top: .5rem;
             font-size: 1.5rem;
             font-weight: 400;
+            position: absolute;
+            bottom: -1.4rem;
         }
 
         &:hover + &-label {
