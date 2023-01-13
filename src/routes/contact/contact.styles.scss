@@ -1,6 +1,66 @@
+@import "./src/sass/__variables.scss";
 
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 1rem;
+  color: $primary-color;
+  font-weight: 500;
+}
 
 .contact-section {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
-    
+    margin: 12rem 0 12rem $section-margin;
+}
+
+.form {
+    background-color: #faf8f6;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10rem;
+    width: 50%;
+    box-shadow: rgba(18, 30, 39, 0.2) 5px 5px, rgba(18, 30, 39, 0.2) 10px 10px, rgba(18, 30, 39, 0.1) 15px 15px;
+        
+    // box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 2rem;
+
+    .form-input {
+        background: none;
+        background-color: white;
+        color: $secondary-color;
+        font-size: 1.4rem;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid $primary-color;
+        border-right: 2px solid $primary-color;
+        margin: 25px 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus ~ .form-input-label {
+            @include shrinkLabel();
+        }
+    }
+
+    .form-input-label {
+        color: $secondary-color;
+        font-size: 1.4rem;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 300ms ease all;
+
+        &.shrink {
+        @include shrinkLabel();
+        }
+  }
 }
