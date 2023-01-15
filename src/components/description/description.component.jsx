@@ -1,7 +1,7 @@
 import descriptionPhoto from '../../assets/description-photo1.1.png';
 import NextSection from '../next-section/next-section.component';
+import IconButton from '../icon-button/icon-button.component';
 
-import { IconContext } from 'react-icons';
 import { ImGithub } from "react-icons/im";
 import { FaLinkedin } from "react-icons/fa";
 import { TbMail } from "react-icons/tb";
@@ -9,22 +9,8 @@ import { TbMail } from "react-icons/tb";
 import './description.styles.scss';
 
 const Description = () => {
-  const DefineIconButton = ({icon, label}) => {
     return (
-      <IconContext.Provider value={{ className: "global-class-name" }}>
-        <div className='description__icon-box'>
-          <div className='description__icon'>
-              {icon}
-          </div>
-          <div className='description__icon-label'>{label}</div>
-        </div>
-      </IconContext.Provider> 
-    )
-  }
-
-    return (
-      <>
-      
+      <> 
         <section className="description-section">
           <div className="description">
             <div className="description__text">
@@ -50,9 +36,9 @@ const Description = () => {
               <img className="description__photo" src={descriptionPhoto} alt="Description" />
               
               <div className='description__icons'>
-                <DefineIconButton icon={<ImGithub />} label={"Github"} />
-                <DefineIconButton icon={<FaLinkedin />} label={"LinkedIn"} />
-                <DefineIconButton icon={<TbMail />} label={"Contact"} />
+                <IconButton icon={<ImGithub />} label={"Github"} />
+                <IconButton icon={<FaLinkedin />} label={"LinkedIn"} />
+                <IconButton icon={<TbMail />} label={"Contact"} />
               </div>
             </div>
           </div>

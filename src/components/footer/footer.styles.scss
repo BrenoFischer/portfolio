@@ -1,18 +1,23 @@
 @import "./src/sass/__variables.scss";
 
+$footer-boxes-h: 80%; //height
+$footer-boxes-p-t: 2.5%; //padding-top
+
 .footer {
-    height: 20vh;
+    height: 30vh;
     background-color: $secondary-color;
 
     &__content-box {
         display: flex;
+        justify-content: space-around;
         height: 100%;
         align-items: center;
     }
 
     &__text {
-        margin-left: 8rem;
         color: white;
+        height: $footer-boxes-h;
+        padding-top: $footer-boxes-p-t;
         
         &-title {
             font-size: 2rem;
@@ -20,8 +25,42 @@
         }
 
         p {
-            margin-top: 1rem;
+            margin-top: 3rem;
             font-size: 1.4rem;
         }
+    }
+
+    &__info {
+        color: $primary-color;
+        text-align: center;
+        height: $footer-boxes-h;
+        padding-top: $footer-boxes-p-t;
+
+        &-title {
+            font-size: 2rem;
+        }
+
+        &-icons {
+            display: flex;
+            color: white;
+            margin-top: 2rem;
+        }
+    }
+
+
+    &__contact {
+        height: $footer-boxes-h;
+        padding-top: $footer-boxes-p-t;
+
+        &-title {
+            font-size: 2rem;
+            color: $primary-color;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
     }
 }

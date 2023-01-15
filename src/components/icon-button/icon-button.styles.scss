@@ -1,0 +1,31 @@
+@import "./src/sass/__variables.scss";
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary-color;
+    position: relative;
+}
+
+.icon {
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        color: white;
+    }
+
+    &-label {
+        color: white;
+        opacity: 0;
+        margin-top: .5rem;
+        font-weight: 400;
+        position: absolute;
+        bottom: -1.4rem;
+    }
+
+    &:hover + &-label {
+        opacity: 1;
+    }
+}

@@ -1,6 +1,5 @@
 import './about.styles.scss';
 
-import { IconContext } from 'react-icons';
 import { FaJs, FaHtml5, FaCss3Alt, FaReact, FaSass, FaPython, FaConnectdevelop } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiStyledcomponents, SiRedux, SiFlutter, SiDart, SiTypescript, SiFirebase, SiDjango } from "react-icons/si";
@@ -8,20 +7,7 @@ import { SiStyledcomponents, SiRedux, SiFlutter, SiDart, SiTypescript, SiFirebas
 
 import NextSection from '../../components/next-section/next-section.component';
 import SectionTitle from '../../components/section-title/section-title.component';
-
-const SkillIcon = ({icon, title}) => {
-    return (
-        <div className='about-section__skill'>
-            <IconContext.Provider value={{ size: "5rem", className: "global-class-name" }}>
-                <div className='about-section__skill-icon'>
-                    {icon}
-                </div>
-            </IconContext.Provider> 
-            
-            <div className='about-section__skill-title'>{title}</div>
-        </div>
-    );
-}
+import SkillIcon from '../../components/skill-icon/skill-icon.components';
 
 const About = () => {
     return (
