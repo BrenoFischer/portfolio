@@ -87,7 +87,7 @@ const Contact = () => {
                         value={message}
                     />
 
-                    <Button buttonText={"Submit"}/>
+                    <Button buttonText={"Send message!"}/>
                 </form>
             </div>
         </section>

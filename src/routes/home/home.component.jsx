@@ -4,6 +4,7 @@ import About from '../about/about.component';
 import Contact from '../contact/contact.component';
 
 import '../../sass/__utilities.scss';
+import Footer from '../../components/footer/footer.component';
 
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <Projects />
       <About />
       <Contact />
+      <Footer />
     </main>
   );
 }

@@ -16,7 +16,6 @@ const Navigation = () => {
         <>
             <div className="nav">
                 <ul className="nav-links">
-                    <NavLink title={"Home"} />
                     <NavLink title={"Projects"} />
                     <NavLink title={"About"} />
                     <NavLink title={"Contact me"} />

@@ -1,0 +1,27 @@
+@import "./src/sass/__variables.scss";
+
+.footer {
+    height: 20vh;
+    background-color: $secondary-color;
+
+    &__content-box {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__text {
+        margin-left: 8rem;
+        color: white;
+        
+        &-title {
+            font-size: 2rem;
+            color: $primary-color;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.4rem;
+        }
+    }
+}
