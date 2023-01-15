@@ -28,8 +28,8 @@ const Footer = () => {
                 <div className='footer__contact'>
                     <h2 className='footer__contact-title'>Get in touch</h2>
                     <div className='footer__icons'>
-                        <IconButton icon={<ImGithub />} label={"Github"} iconSize={"2.5rem"} labelSize={"1.2rem"} />
-                        <IconButton icon={<FaLinkedin />} label={"LinkedIn"} iconSize={"2.5rem"} labelSize={"1.2rem"} />
+                        <IconButton icon={<ImGithub />} label={"Github"} iconSize={"2.5rem"} labelSize={"1.2rem"} url="https://github.com/BrenoFischer" />
+                        <IconButton icon={<FaLinkedin />} label={"LinkedIn"} iconSize={"2.5rem"} labelSize={"1.2rem"} url="https://www.linkedin.com/in/breno-perricone-fischer-191964129/" />
                         <IconButton icon={<TbMail />} label={"Contact"} iconSize={"2.5rem"}  labelSize={"1.2rem"} />
                     </div>
                 </div>
