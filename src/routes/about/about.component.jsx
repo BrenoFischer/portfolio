@@ -11,7 +11,7 @@ import SkillIcon from '../../components/skill-icon/skill-icon.components';
 
 const About = () => {
     return (
-        <section className="about-section">
+        <section className="about-section" id="about">
             <div className='about-section__content'>
                 <SectionTitle title={"About"} />
                 <div className=''></div>
@@ -43,7 +43,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <NextSection title={"Contact Me"} />
+            <NextSection title="Contact Me" sectionId="contact" />
         </section>
     );
 }

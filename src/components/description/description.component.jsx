@@ -11,7 +11,7 @@ import './description.styles.scss';
 const Description = () => {
     return (
       <> 
-        <section className="description-section">
+        <section className="description-section" id="description">
           <div className="description">
             <div className="description__text">
               <h1 className='description__text-title'>Hello, I'm Breno!<br/>I'm a <span>Front-end Developer</span></h1>
@@ -42,7 +42,7 @@ const Description = () => {
               </div>
             </div>
           </div>
-          <NextSection title={"Explore Projects"} />
+          <NextSection title={"Explore Projects"} sectionId="projects" />
         </section>
       </>
     );

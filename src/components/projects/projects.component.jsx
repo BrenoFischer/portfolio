@@ -104,7 +104,7 @@ const Projects = () => {
     const linkSass = "https://github.com/BrenoFischer/Udemy-SCSS";
 
     return (
-        <section className='projects-section'>
+        <section className='projects-section' id="projects">
             <SectionTitle title={"Projects"} />
             <div className='projects-box'>
                 <Project 
@@ -143,7 +143,7 @@ const Projects = () => {
                     link={linkSass}
                 />
             </div>
-            <NextSection title={"More about me"} secondary={true} />
+            <NextSection title="More about me" secondary={true} sectionId="about" />
         </section>
     );
 }
