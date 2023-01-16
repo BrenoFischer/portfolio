@@ -20,17 +20,15 @@ const Description = () => {
             <p className='description__text-paragraph'>in touch with multiple techs - from machine learning to mobile dev.</p>
           </div>
           <div className="description__photo-box">
-            <div className="description__photo-box-bubble">Hi!</div>
+            <div className="description__photo-box-bubble"><p>Hi!</p></div>
             <div className="description__photo-box-pointer"></div>
-            <div className="description__photo-box-bubble bubble-2">Welcome to my portfolio</div>
+            <div className="description__photo-box-bubble bubble-2"><p>Welcome to my <span>portfolio</span></p></div>
             <div className="description__photo-box-pointer pointer-2"></div>
-            <div className="description__photo-box-bubble bubble-2">Welcome to my portfolio</div>
-            <div className="description__photo-box-pointer pointer-2"></div>
-            <div className="description__photo-box-bubble bubble-3">Explore my projects!</div>
+            <div className="description__photo-box-bubble bubble-3">Explore my <span>projects!</span></div>
             <div className="description__photo-box-pointer pointer-3"></div>
-            <div className="description__photo-box-bubble bubble-4">Read more about my journey</div>
+            <div className="description__photo-box-bubble bubble-4">Read more about <span>my journey</span></div>
             <div className="description__photo-box-pointer pointer-4"></div>
-            <div className="description__photo-box-bubble bubble-5">You can easily "Contact me"</div>
+            <div className="description__photo-box-bubble bubble-5">You can easily <span>"Contact me"</span></div>
             <div className="description__photo-box-pointer pointer-5"></div>
             
             <img className="description__photo" src={descriptionPhoto} alt="Description" />
