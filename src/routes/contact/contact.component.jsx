@@ -30,6 +30,15 @@ const FormInput = ({label, textarea, ...otherProps}) => {
     )
 }
 
+const LoadingSpinner = () => {
+    return (
+        <div className="spinner-container">
+            <div className="loading-spinner">
+            </div>
+        </div>
+    );
+}
+
 const defaultFormFields = {
     name: '',
     email: '',
@@ -38,6 +47,7 @@ const defaultFormFields = {
 
 const Contact = () => {
     const form = useRef();
+    const [isLoading, setIsLoading] = useState(false);
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { name, email, message } = formFields;
 
@@ -49,12 +59,15 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         emailjs.sendForm('service_4n0kkhy', 'template_mvaxded', form.current, '4Y4-IJ2hC5NM0ZrdC')
           .then((result) => {
               console.log(result.text);
+              setIsLoading(false);
           }, (error) => {
               console.log(error.text);
+              setIsLoading(false);
           });
     }
 
@@ -101,7 +114,12 @@ const Contact = () => {
                         value={message}
                     />
 
-                    <Button buttonText={"Send message!"}/>
+                    <div className='form-low-row'>
+                        <Button buttonText={"Send message!"}/>
+                        {isLoading &&
+                            <LoadingSpinner />
+                        }
+                    </div>
                 </form>
             </div>
         </section>
