@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
+import emailjs from '@emailjs/browser';
 
 import SectionTitle from '../../components/section-title/section-title.component';
 import Button from '../../components/button/button.component';
@@ -35,6 +37,7 @@ const defaultFormFields = {
 }
 
 const Contact = () => {
+    const form = useRef();
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { name, email, message } = formFields;
 
@@ -44,11 +47,22 @@ const Contact = () => {
         setFormFields({...formFields, [name]: value});
     }
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_4n0kkhy', 'template_mvaxded', form.current, '4Y4-IJ2hC5NM0ZrdC')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+    }
+
     return (
         <section className='contact-section' id="contact">
             <SectionTitle title={"Contact Me"} />
             <div className='form-box'>
-                <form className='form' >
+                <form ref={form} className='form' onSubmit={sendEmail} >
                     <div className='description-form-box'>
                         <div className='description-form-title-box'>
                             <h2 className='description-form-title'>Let's have a chat!</h2>
