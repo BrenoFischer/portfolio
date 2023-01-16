@@ -69,15 +69,15 @@ const Project = ({ image, title, descriptionText, stacks, link }) => {
         //     </motion.div>
         // </div>
 
-        <div className="project">
+        <li className="project">
             <div className='project__photo-box' style={{backgroundImage: `url(${image})`}} />
             <div className='project__description'>
                 <h2 className='project__title'>{title}</h2>
-                <div className='project__stacks'>
+                <ul className='project__stacks'>
                     {stacks.map((stack) => {
-                        return <div className='project__stack'>{stack}</div>
+                        return <li key={stack} className='project__stack'>{stack}</li>
                     })}
-                </div>
+                </ul>
                 <div className='project__description-text'>
                     <p>{descriptionText}</p>
                 </div>
@@ -86,7 +86,7 @@ const Project = ({ image, title, descriptionText, stacks, link }) => {
                     <a href={link} target="_blank" rel="noreferrer">View on Github <span>&#x2197;</span></a>
                 </div>
             </div>
-        </div>
+        </li>
     )
 }
 
@@ -106,7 +106,7 @@ const Projects = () => {
     return (
         <section className='projects-section' id="projects">
             <SectionTitle title={"Projects"} />
-            <div className='projects-box'>
+            <ul className='projects-box'>
                 <Project 
                     image={groundstationImage}
                     title={"UAV Groundstation"}
@@ -142,7 +142,7 @@ const Projects = () => {
                     stacks={stacksSass}
                     link={linkSass}
                 />
-            </div>
+            </ul>
             <NextSection title="More about me" secondary={true} sectionId="about" />
         </section>
     );

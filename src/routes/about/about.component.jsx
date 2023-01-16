@@ -19,18 +19,18 @@ const About = () => {
                 <SectionTitle title={"Skills"} />
                 <div className='about-section__skill-section'>
                     <h2 className='about-section__skill-section-title'>Programming languages</h2>
-                    <div className='about-section__skills-set'>
+                    <ul className='about-section__skills-set'>
                         <SkillIcon icon={ <FaJs /> } title={"Javascript"} />
                         <SkillIcon icon={ <FaHtml5 /> } title={"HTML5"} />
                         <SkillIcon icon={ <FaCss3Alt /> } title={"CSS3"} />
                         <SkillIcon icon={ <SiDart /> } title={"Dart"} />
                         <SkillIcon icon={ <SiTypescript /> } title={"Typescript"} />
                         <SkillIcon icon={ <FaPython /> } title={"Python"} />
-                    </div>
+                    </ul>
                 </div>
                 <div className='about-section__skill-section'>
                     <h2 className='about-section__skill-section-title'>Frameworks/Libs</h2>
-                    <div className='about-section__skills-set'>
+                    <ul className='about-section__skills-set'>
                         <SkillIcon icon={ <FaReact /> } title={"React.js"} />
                         <SkillIcon icon={ <TbBrandReactNative /> } title={"React Native"} />
                         <SkillIcon icon={ <FaSass /> } title={"Sass"} />
@@ -40,7 +40,7 @@ const About = () => {
                         <SkillIcon icon={ <SiFirebase /> } title={"Firebase"} />
                         <SkillIcon icon={ <SiDjango /> } title={"Django"} />
                         <SkillIcon icon={ <FaConnectdevelop /> } title={"Websockets"} />
-                    </div>
+                    </ul>
                 </div>
             </div>
             <NextSection title="Contact Me" sectionId="contact" />
