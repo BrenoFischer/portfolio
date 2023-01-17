@@ -5,7 +5,8 @@ import emailjs from '@emailjs/browser';
 import SectionTitle from '../../components/section-title/section-title.component';
 import Button from '../../components/button/button.component';
 
-import { FiCoffee } from 'react-icons/fi';
+import { FiCoffee, FiCheckCircle } from 'react-icons/fi';
+import { RxCrossCircled, RxCross2 } from 'react-icons/rx';
 
 import './contact.styles.scss';
 
@@ -48,6 +49,8 @@ const defaultFormFields = {
 const Contact = () => {
     const form = useRef();
     const [isLoading, setIsLoading] = useState(false);
+    const [messageBoxVisible, setMessageBoxVisible] = useState(false);
+    const [emailError, setEmailError] = useState(false);
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { name, email, message } = formFields;
 
@@ -63,13 +66,65 @@ const Contact = () => {
 
         emailjs.sendForm('service_4n0kkhy', 'template_mvaxded', form.current, '4Y4-IJ2hC5NM0ZrdC')
           .then((result) => {
-              console.log(result.text);
-              setFormFields(defaultFormFields);
-              setIsLoading(false);
+            console.log(result.text);
+            setFormFields(defaultFormFields);
+            setMessageBoxVisible(true);
+            setTimeout(() => setMessageBoxVisible(false), 15000);
+            setIsLoading(false);
           }, (error) => {
               console.log(error.text);
+              setEmailError(true);
+              setMessageBoxVisible(true);
+              setTimeout(() => {
+                setMessageBoxVisible(false);
+                setEmailError(false);
+              }, 20000);
               setIsLoading(false);
           });
+    }
+
+    const TempMessageBox = () => {
+        const handleCloseMessageBox = () => {
+            setMessageBoxVisible(false);
+        }
+
+        return (
+            <div className='message-box'>
+                { !emailError ?
+                (<>
+                    <div className='message-box__exit' onClick={handleCloseMessageBox}>
+                        <RxCross2 />
+                    </div>
+                    <div className='message-box__wrap'>
+                        <div className='message-box__icon-box'>
+                            <FiCheckCircle />
+                        </div>
+                        <div className='message-box__text-box'>
+                            <h2 className='message-box__title'>E-mail sent with success</h2>
+                            <p>Thank you for the message! I'll reply as soon as I can :)</p>
+                        </div>
+                    </div>
+                </>)
+                :
+                (<>
+                    <div className='message-box__exit' onClick={handleCloseMessageBox}>
+                        <RxCross2 />
+                    </div>
+                    <div className='message-box__wrap'>
+                        <div className='message-box__icon-box-error'>
+                            <RxCrossCircled />
+                        </div>
+                        <div className='message-box__text-box'>
+                            <h2 className='message-box__title-error'>There was an error - e-mail was not sent</h2>
+                            <p>Sorry about that! Please, e-mail me manually: breno_perricone@hotmail.com</p>
+                        </div>
+                    </div>
+                </>)
+                }
+
+                
+            </div>
+        );
     }
 
     return (
@@ -119,6 +174,9 @@ const Contact = () => {
                         <Button buttonText={"Send message!"}/>
                         {isLoading &&
                             <LoadingSpinner />
+                        }
+                        {messageBoxVisible && 
+                            <TempMessageBox />
                         }
                     </div>
                 </form>
