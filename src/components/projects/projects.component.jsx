@@ -14,7 +14,7 @@ import sassImage from '../../assets/projects-images/sass.gif';
 import './projects.styles.scss';
 import SectionTitle from '../section-title/section-title.component';
 
-const Project = ({ image, title, descriptionText, stacks, link }) => {
+const Project = ({ image, title, descriptionText, stacks, href }) => {
     // const photoVariant = {
     //     visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
     //     hidden: { opacity: 0, x: -400 },
@@ -82,8 +82,8 @@ const Project = ({ image, title, descriptionText, stacks, link }) => {
                     <p>{descriptionText}</p>
                 </div>
                 <div className='project__btn-box'>
-                    <Button buttonText={"View project"} />
-                    <a href={link} target="_blank" rel="noreferrer">View on Github <span>&#x2197;</span></a>
+                    <Button buttonText={"View on Github"} href={href} />
+                    {/* <a href={link} target="_blank" rel="noreferrer">View on Github <span>&#x2197;</span></a> */}
                 </div>
             </div>
         </li>
@@ -97,11 +97,11 @@ const Projects = () => {
     const stacksTravelog = ["Dart", "Flutter", "Firebase", "MaterialUI"];
     const stacksSass = ["Javascript", "HTML5", "CSS3", "Sass"];
 
-    const linkGS = "https://github.com/BrenoFischer/gradys-gs";
-    const linkVip = "https://github.com/BrenoFischer/vip-beauty-rooms";
-    const linkReact = "https://github.com/BrenoFischer/Udemy-ReactJS";
-    const linkTravelog = "https://github.com/BrenoFischer/Travelog";
-    const linkSass = "https://github.com/BrenoFischer/Udemy-SCSS";
+    const hrefGS = "https://github.com/BrenoFischer/gradys-gs";
+    const hrefVip = "https://github.com/BrenoFischer/vip-beauty-rooms";
+    const hrefReact = "https://github.com/BrenoFischer/Udemy-ReactJS";
+    const hrefTravelog = "https://github.com/BrenoFischer/Travelog";
+    const hrefSass = "https://github.com/BrenoFischer/Udemy-SCSS";
 
     return (
         <section className='projects-section' id="projects">
@@ -112,35 +112,35 @@ const Projects = () => {
                     title={"UAV Groundstation"}
                     descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
                     stacks={stacksGS}
-                    link={linkGS}
+                    href={hrefGS}
                 />
                 <Project 
                     image={vipImage}
                     title={"VIP Beauty Rooms"}
                     descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
                     stacks={stacksVip}
-                    link={linkVip}
+                    href={hrefVip}
                 />
                 <Project 
                     image={reactImage}
                     title={"Crown Clothing"}
                     descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
                     stacks={stacksReact}
-                    link={linkReact}
+                    href={hrefReact}
                 />
                 <Project 
                     image={travelogImage}
                     title={"Travelog"}
                     descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
                     stacks={stacksTravelog}
-                    link={linkTravelog}
+                    href={hrefTravelog}
                 />
                 <Project 
                     image={sassImage}
                     title={"Natours"}
                     descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
                     stacks={stacksSass}
-                    link={linkSass}
+                    href={hrefSass}
                 />
             </ul>
             <NextSection title="More about me" secondary={true} sectionId="about" />

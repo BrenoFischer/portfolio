@@ -1,10 +1,20 @@
 import './button.styles.scss';
 
-const Button = ({ buttonText }) => {
+const Button = ({ buttonText, href="" }) => {
     return (
-        <button className="button">
-            {buttonText}
-        </button>
+        <>
+            {href ?
+                (<a href={href} target="_blank" rel="noreferrer">
+                    <button className="button">
+                        {buttonText}
+                    </button>
+                </a>)
+                :
+                (<button className="button">
+                    {buttonText}
+                </button>)
+            }
+        </>
     );
 }
 
