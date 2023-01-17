@@ -15,7 +15,7 @@ $footer-boxes-p-t: 2.5%; //padding-top
     }
 
     &__text {
-        color: white;
+        color: $white;
         height: $footer-boxes-h;
         padding-top: $footer-boxes-p-t;
         
@@ -42,7 +42,7 @@ $footer-boxes-p-t: 2.5%; //padding-top
 
         &-icons {
             display: flex;
-            color: white;
+            color: $white;
             margin-top: 2rem;
         }
     }
