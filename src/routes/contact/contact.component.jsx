@@ -64,6 +64,7 @@ const Contact = () => {
         emailjs.sendForm('service_4n0kkhy', 'template_mvaxded', form.current, '4Y4-IJ2hC5NM0ZrdC')
           .then((result) => {
               console.log(result.text);
+              setFormFields(defaultFormFields);
               setIsLoading(false);
           }, (error) => {
               console.log(error.text);
