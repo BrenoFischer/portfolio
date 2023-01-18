@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 //Bubble 1 variables
 $bubble-height: 5rem;
@@ -42,6 +43,13 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     color: $white;
     margin-top: 15rem;
 
+    @include respond(tablet) {
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__text {
         background-color: $secondary-color;
         padding: 2rem;
@@ -78,6 +86,11 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
         margin-left: 10rem;
         position: relative;
         z-index: 10;
+
+        @include respond(tablet) {
+            margin-left: 0;
+            margin-top: 2rem;
+        }
 
         &:before {
             content: '';
