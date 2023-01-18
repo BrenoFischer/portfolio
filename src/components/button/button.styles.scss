@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 .button {
     cursor: pointer;
@@ -14,10 +15,19 @@
 
     transition: transform .3s, box-shadow .4s;
 
+    @include respond(tablet) {
+        transform: translateY(-1rem);
+        box-shadow: rgba(18, 30, 39, 0.6) 6px 6px;
+    }
+
     &:hover {
         transform: translateY(-1rem);
         box-shadow: rgba(18, 30, 39, 0.6) 10px 10px;
         
+        @include respond(tablet) {
+            transform: translateY(-1rem);
+            box-shadow: rgba(18, 30, 39, 0.6) 6px 6px;
+        }
     }
 
     &:active {

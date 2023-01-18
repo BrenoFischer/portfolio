@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 .projects-section {
     margin: 13rem $section-margin 5rem $section-margin;
@@ -12,10 +13,19 @@
 
 .project {
     display: flex;
-    margin-bottom: 15rem;
     margin-left: $section-content-margin;
-    width: 95rem;
-    height: 35rem;
+    max-width: 105rem;
+    min-height: 35rem;
+    margin-bottom: 4rem;
+    &:not(:last-child) {
+        margin-bottom: 15rem;
+    }
+
+    @include respond(tablet) {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0;
+    }
 
     &__photo-box {
         background-color: $secondary-color;
@@ -29,6 +39,13 @@
         box-shadow: rgba(18, 30, 39, 0.2) 5px 5px, rgba(18, 30, 39, 0.2) 10px 10px, rgba(18, 30, 39, 0.1) 15px 15px;
         // box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
         // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+        @include respond(tablet) {
+            margin-right: 0;
+            margin-bottom: 5rem;
+            width: 100%;
+            height: 40rem;
+        }
     }
 
     &__description {
@@ -67,6 +84,11 @@
     &__btn-box {
         position: absolute;
         bottom: 0;
+
+        @include respond(tablet) {
+            position: inherit;
+            margin-top: 5rem;
+        }
 
         // a {
         //     color: $secondary-color;
