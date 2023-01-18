@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 $footer-boxes-h: 80%; //height
 $footer-boxes-p-t: 2.5%; //padding-top
@@ -7,17 +8,31 @@ $footer-boxes-p-t: 2.5%; //padding-top
     height: 30vh;
     background-color: $secondary-color;
 
+    @include respond(tablet) {
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+
     &__content-box {
         display: flex;
         justify-content: space-around;
         height: 100%;
         align-items: center;
+
+        @include respond(tablet) {
+            flex-direction: column;
+        }
     }
 
     &__text {
         color: $white;
         height: $footer-boxes-h;
         padding-top: $footer-boxes-p-t;
+
+        @include respond(tablet) {
+            text-align: center;
+            padding-top: 5rem;
+        }
         
         &-title {
             font-size: 2rem;
@@ -27,6 +42,10 @@ $footer-boxes-p-t: 2.5%; //padding-top
         p {
             margin-top: 3rem;
             font-size: 1.4rem;
+
+            @include respond(tablet) {
+                margin-top: 1rem;
+            }
         }
     }
 
@@ -36,6 +55,11 @@ $footer-boxes-p-t: 2.5%; //padding-top
         height: $footer-boxes-h;
         padding-top: $footer-boxes-p-t;
 
+        @include respond(tablet) {
+            margin-top: 5rem;
+            padding-top: 0;
+        }
+
         &-title {
             font-size: 2rem;
         }
@@ -44,6 +68,7 @@ $footer-boxes-p-t: 2.5%; //padding-top
             display: flex;
             color: $white;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
     }
 
@@ -51,6 +76,7 @@ $footer-boxes-p-t: 2.5%; //padding-top
     &__contact {
         height: $footer-boxes-h;
         padding-top: $footer-boxes-p-t;
+
 
         &-title {
             font-size: 2rem;
