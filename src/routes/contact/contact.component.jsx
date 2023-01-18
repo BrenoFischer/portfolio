@@ -129,7 +129,9 @@ const Contact = () => {
 
     return (
         <section className='contact-section' id="contact">
-            <SectionTitle title={"Contact Me"} />
+            <div className='contact-section__title-wrapper'>
+                <SectionTitle title={"Contact Me"} />
+            </div>
             <div className='form-box'>
                 <form ref={form} className='form' onSubmit={sendEmail} >
                     <div className='description-form-box'>
