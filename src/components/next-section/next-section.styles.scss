@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 .next-section {
     display: flex;
@@ -19,10 +20,18 @@
 
     &:hover &__title {
         opacity: 1;
+
+        @include respond(tablet-port) {
+            opacity: 0;
+        }
     }
 
     &:hover &__title-secondary {
         opacity: 1;
+
+        @include respond(tablet-port) {
+            opacity: 0;
+        }
     }
 
     &__title-secondary {

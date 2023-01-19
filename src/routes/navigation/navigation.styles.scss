@@ -1,4 +1,5 @@
 @import "./src/sass/__variables.scss";
+@import "./src/sass/__mixins.scss";
 
 .nav {
     height: $nav-height;
@@ -32,6 +33,12 @@
             background-color: rgb(255, 113, 91);
             height: 0.3rem;
             transition: all .3s;
+
+            @include respond(tablet) {
+                opacity: 1;
+                width: 100%;
+                height: 0.2rem;
+            }
         }
 
         &:hover &-border {
