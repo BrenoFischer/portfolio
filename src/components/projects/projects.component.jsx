@@ -103,6 +103,8 @@ const Projects = () => {
     const hrefTravelog = "https://github.com/BrenoFischer/Travelog";
     const hrefSass = "https://github.com/BrenoFischer/Udemy-SCSS";
 
+    const descriptionTextGs = "Created a Web App from scratch, to monitor, control and display Mobile Devices Networks. With a simple, yet customizable interface, this projects enables user to add command buttons (to interact with the mobile devices from the network), add protocols to comunicate with the network";
+
     return (
         <section className='projects-section' id="projects">
             <SectionTitle title={"Projects"} />
@@ -110,7 +112,7 @@ const Projects = () => {
                 <Project 
                     image={groundstationImage}
                     title={"UAV Groundstation"}
-                    descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
+                    descriptionText={descriptionTextGs}
                     stacks={stacksGS}
                     href={hrefGS}
                 />

@@ -14,7 +14,9 @@ const About = () => {
         <section className="about-section" id="about">
             <div className='about-section__content'>
                 <SectionTitle title={"About"} />
-                <div className=''></div>
+                <div className='about-section__text-box'>
+                    <p>My journey as a developer started during the period of my Bachelor on Chemical Engineering. It was love at first lesson, when I had contact with a programming discipline. Back then I didn't know, but one year later I realised that I was much more into Computer Science and Programming than Chemical Engineering. During the University years I developed myself in several ways. I had contact with all sorts of technological fields. Machine learning, Mobile Development, Web Development, Internet of Things .... just to cite some of them.... I had contact, worked with and exchange knowledge with incredible teachers, tutors and colleagues. </p>
+                </div>
 
                 <SectionTitle title={"Skills"} />
                 <div className='about-section__skill-section'>
