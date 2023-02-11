@@ -140,6 +140,8 @@ const Contact = () => {
                             <FiCoffee />
                         </div>
                         <p className='description-form'>Fill in your info in the form below, to get in touch with me directly.</p>
+                        <br/>
+                        <p className='description-form'>If you prefer, you can manually email to breno_perricone@hotmail.com.</p>
                     </div>
                     <FormInput 
                         textarea={false}
