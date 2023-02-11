@@ -13,6 +13,18 @@
         color: $white;
     }
 
+    &__text-box {
+        margin-bottom: 10rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        letter-spacing: .1rem;
+        font-weight: 400;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
     &__skill-section {
         color: $white;
         margin-left: 5%;

@@ -15,7 +15,16 @@ const About = () => {
             <div className='about-section__content'>
                 <SectionTitle title={"About"} />
                 <div className='about-section__text-box'>
-                    <p>My journey as a developer started during the period of my Bachelor on Chemical Engineering. It was love at first lesson, when I had contact with a programming discipline. Back then I didn't know, but one year later I realised that I was much more into Computer Science and Programming than Chemical Engineering. During the University years I developed myself in several ways. I had contact with all sorts of technological fields. Machine learning, Mobile Development, Web Development, Internet of Things .... just to cite some of them.... I had contact, worked with and exchange knowledge with incredible teachers, tutors and colleagues. </p>
+                    <p>My journey as a developer started during the period of my Bachelor on Chemical Engineering. It was love at first lesson, when I had contact with a <span>programming</span> discipline. Back then I didn't know, but one year later I realised that I was much more into <span>Computer Science and Programming</span> than Chemical Engineering.</p>
+                    <br/>
+                    <p>During the University years I developed myself in several ways. I had contact with all sorts of technological fields. <span>Machine learning</span>, <span>Mobile Development</span>, <span>Web Development</span>, <span>Internet of Things</span>... Just to cite some of them... I worked and exchanged knowledge with incredible teachers, tutors and colleagues. </p>
+                    <br/>
+                    <p>But what caught my heart was Web Development. <span>Front-end Development</span>, more specifically. This is the field I get myself studying, reading about and practicing in most of my free time.</p>
+                    <br/>
+                    <p>I'm <span>curious</span> by nature. Always trying to understand new concepts and ways to find a <span>solution to a problem</span>.</p>
+                    <p>Writing <span>clean code</span>, that is <span>acessible</span> to others it's what motivates me to always improve while coding.</p>
+                    <br/>
+                    <p>I have a <span>Bsc. in Computer Science</span> from PUC-Rio University and Certificates from Udemy and Udacity </p>
                 </div>
 
                 <SectionTitle title={"Skills"} />
