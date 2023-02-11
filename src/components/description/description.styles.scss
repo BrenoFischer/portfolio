@@ -84,6 +84,11 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             font-size: 1.6rem;
             margin-top: 1rem;
 
+            span {
+                font-size: 2rem;
+                color: $primary-color;
+            }
+
             @include respond(tablet-port) {
                 font-size: 1.4rem;
             }
