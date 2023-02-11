@@ -2,6 +2,8 @@
 // import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import Button from '../button/button.component';
 import NextSection from '../next-section/next-section.component';
 
@@ -79,7 +81,7 @@ const Project = ({ image, title, descriptionText, stacks, href }) => {
                     })}
                 </ul>
                 <div className='project__description-text'>
-                    <p>{descriptionText}</p>
+                    {[...descriptionText]}
                 </div>
                 <div className='project__btn-box'>
                     <Button buttonText={"View on Github"} href={href} />
@@ -103,7 +105,55 @@ const Projects = () => {
     const hrefTravelog = "https://github.com/BrenoFischer/Travelog";
     const hrefSass = "https://github.com/BrenoFischer/Udemy-SCSS";
 
-    const descriptionTextGs = "Created a Web App from scratch, to monitor, control and display Mobile Devices Networks. With a simple, yet customizable interface, this projects enables user to add command buttons (to interact with the mobile devices from the network), add protocols to comunicate with the network";
+    const descriptionTextGs = [
+        <p>I created a <b>Web App</b> from scratch, to monitor, control and display Mobile Networks (drones).</p>,
+        <br/>,
+        <p>With a simple, yet <b>customizable interface</b>, this projects enables user to monitor a network in real time, add command buttons, protocols and much more!</p>,
+        <br/>,
+        <p>This App is not deployed and should be run locally</p>
+    ]
+
+    const descriptionTextVip = [
+        <p>Simple <b>landing page</b> for a local beauty saloon.</p>,
+        <br/>,
+        <p>All design was done following the client request. The focus is to present services and information with a <b>simple interface</b>. Next steps involves an <b>exciting tool</b> for managers to <b>edit/add/remove services</b></p>,
+        <br/>,
+        <p>You can see it live on </p>,
+        <Link to='https://uniquebeauty-limerick.com/'><b>uniquebeauty-limerick.com/</b></Link>
+    ]
+
+    const descriptionTextCrown = [
+        <p>This project is a fake clothing store, to practice mainly <b>React</b> concepts and its environment.</p>,
+        <br/>,
+        <p>All design and implementation was done following the React course from Udemy. Some concepts studied were <b>Hooks</b>, <b>Redux</b>, <b>Firebase</b> and <b>Typescript</b></p>,
+        <br/>,
+        "More about the Udemy Course ",
+        <Link to='https://www.udemy.com/course/complete-react-developer-zero-to-mastery/'><b>here.</b></Link>,
+        
+        <br/>,
+        "You can see it live on ",
+        <Link to='https://udemy-react-crown.netlify.app/'><b>udemy-react-crown.netlify.app/</b></Link>
+    ]
+
+    const descriptionTextTravelog = [
+        <p>Your <b>travel diary</b> anywhere you want it to be!</p>,
+        <br/>,
+        <p>Travelog is a product created for my college discipline <b>(Flutter)</b>. It's a platform to <b>write</b>, <b>share</b> and <b>explore</b> digital reports of travel experiences.</p>,
+        <br/>,
+        <p>This App is not deployed and should be run locally</p>
+    ]
+
+    const descriptionTextNatours = [
+        <p>This project is set of projects, to practice mainly <b>Advanced CSS</b> and <b>Sass</b>.</p>,
+        <br/>,
+        <p>All design and implementation was done following the CSS course from Udemy. Some concepts studied were <b>Animations with CSS</b>, <b>Sass</b>, <b>Flexbox</b> and <b>Grid</b></p>,
+        <br/>,
+        "More about the Udemy Course ",
+        <Link to='https://www.udemy.com/course/advanced-css-and-sass/'><b>here.</b></Link>,
+        
+        <br/>,
+        <p>This App is not deployed and should be run locally</p>
+    ]
 
     return (
         <section className='projects-section' id="projects">
@@ -119,28 +169,28 @@ const Projects = () => {
                 <Project 
                     image={vipImage}
                     title={"VIP Beauty Rooms"}
-                    descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
+                    descriptionText={descriptionTextVip}
                     stacks={stacksVip}
                     href={hrefVip}
                 />
                 <Project 
                     image={reactImage}
                     title={"Crown Clothing"}
-                    descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
+                    descriptionText={descriptionTextCrown}
                     stacks={stacksReact}
                     href={hrefReact}
                 />
                 <Project 
                     image={travelogImage}
                     title={"Travelog"}
-                    descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
+                    descriptionText={descriptionTextTravelog}
                     stacks={stacksTravelog}
                     href={hrefTravelog}
                 />
                 <Project 
                     image={sassImage}
                     title={"Natours"}
-                    descriptionText={"Text text a big description text to explain and introduce the project. Make sure to don't make it so big, but also has all the contect necessary to reader understand what this is about"}
+                    descriptionText={descriptionTextNatours}
                     stacks={stacksSass}
                     href={hrefSass}
                 />
