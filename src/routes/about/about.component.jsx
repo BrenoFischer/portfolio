@@ -24,7 +24,7 @@ const About = () => {
                     <p>I'm <span>curious</span> by nature. Always trying to understand new concepts and ways to find a <span>solution to a problem</span>.</p>
                     <p>Writing <span>clean code</span>, that is <span>acessible</span> to others it's what motivates me to always improve while coding.</p>
                     <br/>
-                    <p>I have a <span>Bsc. in Computer Science</span> from PUC-Rio University and Certificates from Udemy and Udacity </p>
+                    <p>I have a <span>Bsc. in Computer Science</span> from PUC-Rio University.</p>
                 </div>
 
                 <SectionTitle title={"Skills"} />
