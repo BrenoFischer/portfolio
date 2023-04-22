@@ -8,7 +8,8 @@ import Button from '../button/button.component';
 import NextSection from '../next-section/next-section.component';
 
 import groundstationImage from '../../assets/projects-images/groundstation.gif'
-import vipImage from '../../assets/projects-images/vip.png';
+import vipImage from '../../assets/projects-images/vip-logo.jpg';
+import closerImage from '../../assets/projects-images/closer.png';
 import reactImage from '../../assets/projects-images/react.gif';
 import travelogImage from '../../assets/projects-images/travelog.png';
 import sassImage from '../../assets/projects-images/sass.gif';
@@ -94,13 +95,15 @@ const Project = ({ image, title, descriptionText, stacks, href }) => {
 
 const Projects = () => {
     const stacksGS = ["Javascript", "HTML5", "CSS3", "Python", "Django","Websockets", "ESP32"];
-    const stacksVip = ["Javascript", "HTML5", "CSS3", "React", "Sass"];
+    const stacksVip = ["Javascript", "HTML5", "CSS3", "React", "Redux", "Sass", "Firebase"];
+    const stacksCloser = ["Javascript", "HTML5", "CSS3", "React", "Sass"];
     const stacksReact = ["Javascript", "Typescript", "HTML5", "CSS3", "React", "Redux", "Firebase", "Styled-Components", "Sass", "GraphQL"];
     const stacksTravelog = ["Dart", "Flutter", "Firebase", "MaterialUI"];
     const stacksSass = ["Javascript", "HTML5", "CSS3", "Sass"];
 
     const hrefGS = "https://github.com/BrenoFischer/gradys-gs";
     const hrefVip = "https://github.com/BrenoFischer/vip-beauty-rooms";
+    const hrefCloser = "https://github.com/BrenoFischer/Closer";
     const hrefReact = "https://github.com/BrenoFischer/Udemy-ReactJS";
     const hrefTravelog = "https://github.com/BrenoFischer/Travelog";
     const hrefSass = "https://github.com/BrenoFischer/Udemy-SCSS";
@@ -114,12 +117,20 @@ const Projects = () => {
     ]
 
     const descriptionTextVip = [
-        <p>Simple <b>landing page</b> for a local beauty saloon.</p>,
+        <p><b>Web App</b> for a local beauty saloon.</p>,
         <br/>,
-        <p>All design was done following the client request. The focus is to present services and information with a <b>simple interface</b>. Next steps involves an <b>exciting tool</b> for managers to <b>edit/add/remove services</b></p>,
-        <br/>,
+        <p>All design was done following the client request. The focus is to present services and information with a <b>simple interface</b>. Authentication/database done with <b>Firebase</b>, allowing managers to <b>edit/add/remove</b> relevant information</p>,
         <p>You can see it live on </p>,
         <Link to='https://uniquebeauty-limerick.com/'><b>uniquebeauty-limerick.com/</b></Link>
+    ]
+
+    const descriptionTextCloser = [
+        <p>Landing page for <Link to='https://socialimpactireland.ie/'><b>Social Impact Ireland</b></Link> project.</p>,
+        <br/>,
+        <p>Closer is designed to bring the social enterprise community together. The landing page presents all project features and a simple way to contact the company</p>,
+        <br/>,
+        <p>You can see working in progress live on </p>,
+        <Link to='https://closer-si.netlify.app/'><b>closer-si.netlify.app/</b></Link>
     ]
 
     const descriptionTextCrown = [
@@ -168,10 +179,17 @@ const Projects = () => {
                 />
                 <Project 
                     image={vipImage}
-                    title={"VIP Beauty Rooms"}
+                    title={"Unique Beauty Limerick"}
                     descriptionText={descriptionTextVip}
                     stacks={stacksVip}
                     href={hrefVip}
+                />
+                <Project 
+                    image={closerImage}
+                    title={"Closer"}
+                    descriptionText={descriptionTextCloser}
+                    stacks={stacksCloser}
+                    href={hrefCloser}
                 />
                 <Project 
                     image={reactImage}
