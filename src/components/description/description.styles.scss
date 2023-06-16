@@ -30,7 +30,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
     display: flex;
     justify-content: center;
     height: calc(100vh - $nav-height);
-    background-image: url("../../assets/90s-3-2.png");
+    background: $secondary-color;
     background-position: top;
     position: relative;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
@@ -63,9 +63,9 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
 
 
         &-title {
-            font-family: "Mada", sans-serif;
+            font-family: "Titillium Web", sans-serif;
             font-size: 5.5rem;
-            font-weight: 400;
+            font-weight: 900;
 
             @include respond(tablet-port) {
                 font-size: 4rem;
@@ -157,6 +157,7 @@ $appear-bubble-5-delay: calc($appear-bubble-duration + $appear-bubble-4-delay + 
             opacity: 0;
             position: absolute;
             top: $bubble-position-top;
+            left: -2rem;
             height: $bubble-height;
             width: 10rem;
             background-color: $white;

@@ -24,7 +24,12 @@ const About = () => {
                     <p>I'm <span>curious</span> by nature. Always trying to understand new concepts and ways to find a <span>solution to a problem</span>.</p>
                     <p>Writing <span>clean code</span>, that is <span>acessible</span> to others it's what motivates me to always improve while coding.</p>
                     <br/>
-                    <p>I have a <span>Bsc. in Computer Science</span> from PUC-Rio University.</p>
+                    <p>I have a <span>Bsc. in Computer Science</span> from PUC-Rio University, ranked at <span>first</span> in the Brazil IT Universities Ranking (ENADE ranking)</p>
+                    <br/>
+                    <p>My college internships helped me grown as a <span>software developer professional</span>. My first internship was as a <span>Mobile Developer</span>, using mainly <span>React Native</span> and <span>Mongodb</span>. This experience inserted me into a startup development environment, where I was in touch with the <span>Agile Methodology</span> and where I had plenty interaction with Seniors, Juniors, CEOs, Designers, Economists and HRs.</p>
+                    <p>Another internship that added a lot to my professional growth was the <span>Web App Gradys Groundstation</span>. This project sponsored by the <span>U.S. Air Force</span>, accomplished remarkable goals in the study of <span>devices network communication</span>. My tutors gave me freedom to create, in my own way, an Web App to monitor/control a mobile network of devices. This kind of freedom helped me develop a <span>professional responsibility</span>, to make the best product decisions.</p>
+                    <br/>
+                    <p>Complementary professional specialization includes <span>Udemy Courses</span> (Javascript, React, Sass and Web Development) and <span>Rocketseat Course</span> (React Trail).</p>
                 </div>
 
                 <SectionTitle title={"Skills"} />
