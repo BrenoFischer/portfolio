@@ -16,7 +16,7 @@ const Description = () => {
           <div className="description__text">
             <h1 className='description__text-title'>Hello, I'm Breno<br/><span>Front-end Developer</span></h1>
             <p className='description__text-paragraph margin-top-small'>I was hooked by front-end development since my first HTML code 	<span>&#60;/&#62;</span></p>
-            <p className='description__text-paragraph'>I'm passionate to create, explore and bring to life ideas with my computer <span>&#x1F4BB;</span></p>
+            <p className='description__text-paragraph'>I'm passionate to bring to life ideas with my computer <span>&#x1F4BB;</span></p>
           </div>
           <div className="description__photo-box">
             <div className="description__photo-box-bubble"><p>Hi!</p></div>
