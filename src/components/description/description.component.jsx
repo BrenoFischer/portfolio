@@ -34,7 +34,7 @@ const Description = () => {
             
             <div className='description__icons'>
               <IconButton icon={<ImGithub />} label={"Github"} url="https://github.com/BrenoFischer" />
-              <IconButton icon={<FaLinkedin />} label={"LinkedIn"} url="https://www.linkedin.com/in/breno-perricone-fischer-191964129/" />
+              <IconButton icon={<FaLinkedin />} label={"LinkedIn"} url="https://www.linkedin.com/in/brenoperricone/" />
               <IconButton icon={<TbMail />} label={"Contact"} />
             </div>
           </div>
