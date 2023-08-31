@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Button from '../button/button.component';
 import NextSection from '../next-section/next-section.component';
 
+import flamengoImage from '../../assets/projects-images/flamengo.png'
 import groundstationImage from '../../assets/projects-images/groundstation.gif'
 import vipImage from '../../assets/projects-images/vip-logo.jpg';
 import closerImage from '../../assets/projects-images/closer.png';
@@ -94,6 +95,7 @@ const Project = ({ image, title, descriptionText, stacks, href }) => {
 }
 
 const Projects = () => {
+    const stacksFlamengo = ["Typescript", "React", "HTML5", "CSS3", "Firebase", "Styled-Components"];
     const stacksGS = ["Javascript", "HTML5", "CSS3", "Python", "Django","Websockets", "ESP32"];
     const stacksVip = ["Javascript", "HTML5", "CSS3", "React", "Redux", "Sass", "Firebase"];
     const stacksCloser = ["Javascript", "HTML5", "CSS3", "React", "Sass"];
@@ -101,12 +103,21 @@ const Projects = () => {
     const stacksTravelog = ["Dart", "Flutter", "Firebase", "MaterialUI"];
     const stacksSass = ["Javascript", "HTML5", "CSS3", "Sass"];
 
+    const hrefFlamengo = "https://github.com/BrenoFischer/flamengo-titles";
     const hrefGS = "https://github.com/BrenoFischer/gradys-gs";
     const hrefVip = "https://github.com/BrenoFischer/vip-beauty-rooms";
     const hrefCloser = "https://github.com/BrenoFischer/Closer";
     const hrefReact = "https://github.com/BrenoFischer/Udemy-ReactJS";
     const hrefTravelog = "https://github.com/BrenoFischer/Travelog";
     const hrefSass = "https://github.com/BrenoFischer/Udemy-SCSS";
+
+    const descriptionTextFlamengo = [
+        <p>Explore the main <b>glories of Flamengo</b> throughout another century of history.</p>,
+        <br/>,
+        <p>Informative website, full of <b>historical facts</b>, <b>photographs</b> and <b>statistics</b>, about the main trophies that the biggest footbal team in Brazil has won so far.</p>,
+        <br/>,
+        <p>Access it on: <Link to="https://flamengo-titles.netlify.app/"><b>https://flamengo-titles.netlify.app/</b></Link></p>
+    ]
 
     const descriptionTextGs = [
         <p>I created a <b>Web App</b> from scratch, to monitor, control and display Mobile Networks (drones).</p>,
@@ -170,6 +181,13 @@ const Projects = () => {
         <section className='projects-section' id="projects">
             <SectionTitle title={"Projects"} />
             <ul className='projects-box'>
+                <Project 
+                    image={flamengoImage}
+                    title={"Flamengo Titles"}
+                    descriptionText={descriptionTextFlamengo}
+                    stacks={stacksFlamengo}
+                    href={hrefFlamengo}
+                />
                 <Project 
                     image={groundstationImage}
                     title={"UAV Groundstation"}
